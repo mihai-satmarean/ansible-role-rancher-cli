@@ -7,7 +7,7 @@
 ```
 - hosts: all
   roles:
-    - role: heriet.rancher-cli
+    - role: heriet.rancher_cli
 ```
 
 

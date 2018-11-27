@@ -1,7 +1,7 @@
 ---
 
 galaxy_info:
-  role_name: rancher-cli
+  role_name: rancher_cli
   author: heriet
   description: rancher cli
   license: Apache
