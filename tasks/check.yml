@@ -1,0 +1,8 @@
+---
+
+- name: check rancher cli installed
+  command: "rancher --version"
+  register: rancher_cli_installed_version
+  changed_when: no
+  failed_when: no
+

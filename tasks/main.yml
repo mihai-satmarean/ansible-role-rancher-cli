@@ -1,0 +1,7 @@
+---
+
+- include_tasks: check.yml
+
+- include_tasks: install.yml
+  when: (rancher_cli_installed_version.rc != 0) or (rancher_cli_version not in rancher_cli_installed_version.stdout)
+
