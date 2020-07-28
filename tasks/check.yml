@@ -1,8 +1,8 @@
 ---
 
 - name: check rancher cli installed
-  command: "rancher --version"
-  register: rancher_cli_installed_version
+  command: "rke -v"
+  register: rancher_rke_installed_version
   changed_when: no
   failed_when: no
 

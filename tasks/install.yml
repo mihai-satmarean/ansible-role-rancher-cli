@@ -2,24 +2,12 @@
 
 - name: download rancher cli archive
   get_url:
-    dest: "/tmp/rancher-{{ rancher_cli_version }}.tar.gz"
-    url: "{{ rancher_cli_download_url }}"
-    checksum: "{{ rancher_cli_checksum }}"
-
-- name: unarchive rancher cli
-  unarchive:
-    src: "/tmp/rancher-{{ rancher_cli_version }}.tar.gz"
-    dest: /tmp
-    remote_src: yes
-
-- name: place rancher cli
-  copy:
-    src: "/tmp/rancher-{{ rancher_cli_version }}/rancher"
-    dest: "{{ rancher_cli_install_dir }}/rancher"
-    remote_src: yes
+    dest: "{{ rancher_rke_install_dir }}/rke"
+    url: "{{ rancher_rke_download_url }}"
+    # checksum: "{{ rancher_cli_checksum }}"
 
 - name: rancher cli is executable
   file:
-    path: "{{ rancher_cli_install_dir }}/rancher"
+    path: "{{ rancher_rke_install_dir }}/rke"
     mode: a+x
 
